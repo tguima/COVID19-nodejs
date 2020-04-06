@@ -1,0 +1,8 @@
+const server = require('./api/config/server')
+//require('./api/config/databaseMongo')
+const routerMW = require('./api/routes/routesMW')
+const routerXML = require('./api/routes/routesXML')
+const routerOPT = require('./api/routes/routesOPT')
+server.use('/MWAIDA', routerMW)
+server.use('/XML', routerXML)
+server.use('/OPT', routerOPT)
